@@ -9,7 +9,7 @@ fun main() {
     val timeInWholeMinutes = timeInWholeHours * hoursinMinutes
     val remainingTimeInMinutes = timeOfWay - timeInWholeMinutes
     val timeOfArrivalInHours = timeOfHoursOfDeparture + timeInWholeHours
-    val timeOfArrivalInRemainingHours = (timeOfMinutesOfDeparture + remainingTimeInMinutes) / 60
+    val timeOfArrivalInRemainingHours = (timeOfMinutesOfDeparture + remainingTimeInMinutes) / hoursinMinutes
     val timeOfArrivalInMinutes = timeOfArrivalInRemainingHours * hoursinMinutes
     val timeOfArrivalInRemainingMinutes = (timeOfMinutesOfDeparture + remainingTimeInMinutes) - timeOfArrivalInMinutes
     val timeOfArrivalInHoursFinal = timeOfArrivalInHours + timeOfArrivalInRemainingHours
