@@ -3,9 +3,9 @@ package org.example.`Lesson 2`
 fun main() {
     val cristalOre = 7
     val ironOre = 11
-    val baffpercentages = 0.2
-    val baffCristalOre = (cristalOre * baffpercentages).toInt()
-    val baffIronOre = (ironOre * baffpercentages).toInt()
+    val baffPercentages = 20
+    val baffCristalOre = (cristalOre * (baffPercentages/100))
+    val baffIronOre = (ironOre * (baffPercentages/100))
     println(baffCristalOre)
     println(baffIronOre)
 }
