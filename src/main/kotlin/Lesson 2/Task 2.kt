@@ -6,10 +6,10 @@ fun main() {
     val countOfTrainees = 30
     val traineesSalary = 20000
     val expencesOnWorkersSalary = countOfWorkers * workersSalary
-    println(expencesOnWorkersSalary)
     val expencesOnTraineesSalary = countOfTrainees * traineesSalary
     val summonCountOfSalaries = expencesOnWorkersSalary + expencesOnTraineesSalary
-    println(summonCountOfSalaries)
     val averageSalaryOfOneWorker = summonCountOfSalaries / 80
+    println(expencesOnWorkersSalary)
+    println(summonCountOfSalaries)
     println(averageSalaryOfOneWorker)
 }
