@@ -3,8 +3,9 @@ package org.example.`Lesson 2`
 import kotlin.math.pow
 
 fun main() {
-    val PV = 70000
-    val r = 0.167
-    val FV = PV * (1 + r).pow(20.0)
-    print(String.format("%.3f", FV))
+    val currentCost = 70000
+    val interestRate = 16.7
+    val periodOfInvest=20
+    val futureCost = currentCost * (1 + interestRate/100).pow(periodOfInvest)
+    print(String.format("%.3f", futureCost))
 }
