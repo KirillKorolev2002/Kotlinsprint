@@ -5,6 +5,6 @@ fun main() {
     val secondPupilMark = 4
     val thirdPupilMark = 3
     val fourthPupilMark = 5
-    val summOfMarks = (firstPupilMark + secondPupilMark + thirdPupilMark + fourthPupilMark) / 4f
+    val summOfMarks = (firstPupilMark + secondPupilMark + thirdPupilMark + fourthPupilMark) / 4.toFloat()
     println(summOfMarks)
 }
