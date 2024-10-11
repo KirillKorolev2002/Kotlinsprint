@@ -1,13 +1,8 @@
 package org.example.`Lesson 3`
 
 fun main() {
-    val theStepFrom = "D2"
-    val theStepOn = "D4"
-    val theNumberOfStep = 0
 
-    val sentOnServer = "$theStepFrom-$theStepOn;$theNumberOfStep"
-
-    println(sentOnServer)
+    val sentOnServer = "D2-D4;0"
 
     val theNewStepFrom = "D2"
     val theNewStepOn = "D4"
