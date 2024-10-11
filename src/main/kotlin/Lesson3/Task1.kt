@@ -3,9 +3,9 @@ package org.example.Lesson3
 fun main() {
 
     val nameOfUser = readln()
-    val theTime = "Добрый "
 
-    println(theTime + "день,$nameOfUser")
-    println(theTime + "вечер,$nameOfUser")
-
+    var theTime = "Добрый день,$nameOfUser"
+    println(theTime)
+    theTime = "Добрый вечер,$nameOfUser"
+    println(theTime)
 }
