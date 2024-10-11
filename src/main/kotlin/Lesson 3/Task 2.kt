@@ -8,6 +8,6 @@ fun main() {
     val theCurrentLastSurName = "Сидорова"
     val theCurrentAge = "22"
 
-    println(theSurNameOfWomen + " " + theFirstName + " " + thePatronymic + "," + theAgeOfWomenInThePast)
-    println(theCurrentLastSurName + " " + theFirstName + " " + thePatronymic + "," + theCurrentAge)
+    println("$theSurNameOfWomen $theFirstName $thePatronymic,$theAgeOfWomenInThePast")
+    println("$theCurrentLastSurName $theFirstName $thePatronymic,$theCurrentAge")
 }
