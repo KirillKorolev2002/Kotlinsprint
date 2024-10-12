@@ -1,16 +1,16 @@
 package org.example.`Lesson 4`
 
 fun main() {
-    val theWeather = "Солнечная"
-    val theWeatherToday = readln().toString()
-    val theWeatherTodayAllowed: Boolean = theWeather == theWeatherToday
+    val theSunnyWeather = "Солнечная"
+    val theWeatherToday = "Солнечная"
+    val theWeatherTodayAllowed: Boolean = theSunnyWeather == theWeatherToday
     val theTent = "Открыт"
-    val theTentToday = readln().toString()
+    val theTentToday = "Открыт"
     val theTentTodayAllowed: Boolean = theTent == theTentToday
     val airHumidity: Int = 20
-    val airHumidityToday = readln().toInt()
-    val currentSeason: String = "Зима"
-    val currentSeasonToday = readln().toString()
+    val airHumidityToday = 20
+    val currentSeason: String = "Не Зима"
+    val currentSeasonToday = "Зима"
 
     val conditions =
         theWeatherTodayAllowed && theTentTodayAllowed && airHumidityToday == airHumidity && currentSeasonToday == currentSeason
