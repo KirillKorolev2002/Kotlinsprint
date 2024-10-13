@@ -6,7 +6,7 @@ fun main() {
     val theYearToday = readln().toInt()
     val theUserAgeInYears: Int
 
-    if (theYearToday < userYearOfBirth) {
+    if (theYearToday < userYearOfBirth && userYearOfBirth<2024) {
         theUserAgeInYears = userYearOfBirth - theYearToday
     } else {
         theUserAgeInYears = theYearToday - userYearOfBirth
