@@ -4,13 +4,13 @@ fun main() {
     val day = readln().toInt()
 
     val armAndAbsDay = day % 2 != 0
-    val legAndBackDay = day % 2 == 0
+   val isEven = armAndAbsDay
 
     println(
         """
         Упражнения для рук:       ${armAndAbsDay}
-        Упражнения для ног:       ${legAndBackDay}
-        Упражнения для спины:     ${legAndBackDay}
+        Упражнения для ног:       ${!isEven}
+        Упражнения для спины:     ${!isEven}
         Упражнения для пресса:    ${armAndAbsDay}
     """.trimIndent()
     )
