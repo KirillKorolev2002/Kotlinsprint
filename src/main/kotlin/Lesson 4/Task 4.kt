@@ -3,15 +3,14 @@ package org.example.`Lesson 4`
 fun main() {
     val day = readln().toInt()
 
-    val armAndAbsDay = day % 2 != 0
-   val isEven = armAndAbsDay
+    val Even = day % 2 == 0
 
     println(
         """
-        Упражнения для рук:       ${armAndAbsDay}
-        Упражнения для ног:       ${!isEven}
-        Упражнения для спины:     ${!isEven}
-        Упражнения для пресса:    ${armAndAbsDay}
+        Упражнения для рук:       ${!Even}
+        Упражнения для ног:       ${Even}
+        Упражнения для спины:     ${Even}
+        Упражнения для пресса:    ${!Even}
     """.trimIndent()
     )
 }
