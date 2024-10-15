@@ -1,4 +1,4 @@
-package org.example.lesson_2
+package org.example.`Lesson 6`
 
 fun main() {
     val theNumberInRange = (1..9).random()
