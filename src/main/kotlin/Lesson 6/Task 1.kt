@@ -1,24 +1,19 @@
 package org.example.`Lesson 6`
 
 fun main() {
-    /* На этапе авторизации в приложении пользователь, не имея аккаунта, выбрал регистрацию.
-     Нужно создать блок программы,
-    который сначала предлагает создать логин и пароль,
-    затем запрашивает их, чтобы войти в приложение.
-    Если логин или пароль введены неверно – данные запрашиваются заново.
-     Если данные верны, выводится сообщение – “Авторизация прошла успешно”. */
-    val creatLogin = readln()
-    val creatPassword = readln()
-    val enterLogin = readln()
-    val enterPassword = readln()
 
-    when {
-        enterPassword  == creatPassword && enterLogin == creatLogin -> {
-            println("Авторизация прошла успешно")
+    do {
+        val createLogin = readln()
+        val createPassword = readln()
+        val enterLogin = readln()
+        val enterPassword = readln()
+        when {
+            enterPassword == createPassword && enterLogin == createLogin -> {
+                println("Авторизация прошла успешно")
+                break
+            } else -> {
+                println("Неверный логин или пароль. Попробуйте снова.")
+            }
         }
-
-        else -> {
-            println("Неверный логин или пароль. Попробуйте снова.")
-        }
-    }
+    } while (true)
 }
