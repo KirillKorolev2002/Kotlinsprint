@@ -8,7 +8,7 @@ fun main() {
     val airHumidity = readln().toInt()
     val currentSeason = readln()
     val conditions =
-        isWeatherTodayAllowed && isTentTodayAllowed && airHumidity == AIR_HUMIDITY_TODAY && currentSeason == CURRENT_SEASON_TODAY
+        isWeatherTodayAllowed && isTentTodayAllowed && airHumidity == AIR_HUMIDITY_TODAY && currentSeason != CURRENT_SEASON_TODAY
 
     println("Благоприятные ли условия сейчас для роста бобовых? $conditions")
 }
