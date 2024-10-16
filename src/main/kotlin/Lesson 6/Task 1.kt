@@ -1,12 +1,12 @@
 package org.example.`Lesson 6`
 
 fun main() {
-
+    val createLogin = readln()
+    val createPassword = readln()
+    val enterLogin = readln()
+    val enterPassword = readln()
     do {
-        val createLogin = readln()
-        val createPassword = readln()
-        val enterLogin = readln()
-        val enterPassword = readln()
+
         when {
             enterPassword == createPassword && enterLogin == createLogin -> {
                 println("Авторизация прошла успешно")
