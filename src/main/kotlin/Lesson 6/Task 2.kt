@@ -5,7 +5,6 @@ fun main() {
     var counterNumberOfSeconds = numberOfSeconds
     do {
         counterNumberOfSeconds--
-        println(counterNumberOfSeconds)
         Thread.sleep(1000)
     } while (counterNumberOfSeconds > 0)
     println("Прошло $numberOfSeconds секунд")
