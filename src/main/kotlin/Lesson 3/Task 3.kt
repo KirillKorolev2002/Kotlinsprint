@@ -1,4 +1,4 @@
-package org.example
+package org.example.`Lesson 3`
 
 fun main() {
     val theFirstNumber = readln().toInt()
