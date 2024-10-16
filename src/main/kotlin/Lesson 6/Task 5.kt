@@ -13,6 +13,7 @@ fun main() {
 
         if (theAnswer == theSumOfInputs) {
             println("Добро пожаловать!")
+            break
         } else {
             theTries--
             println("Неверно. Осталось попыток: $theTries")
