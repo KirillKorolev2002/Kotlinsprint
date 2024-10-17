@@ -1,5 +1,4 @@
 package `Lesson 7`
-
 fun main() {
     val charRangeForPassword: CharRange = 'a'..'z'
     val intRangeForPassword: IntRange = 0..9
