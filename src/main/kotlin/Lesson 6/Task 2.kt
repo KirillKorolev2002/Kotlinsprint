@@ -1,10 +1,9 @@
 package org.example.`Lesson 6`
 
 fun main() {
-    val numberOfSeconds = readln().toInt()
-    var counterNumberOfSeconds = numberOfSeconds
-        counterNumberOfSeconds > 0
-        counterNumberOfSeconds--
+    var numberOfSeconds = readln().toInt()
+    numberOfSeconds > 0
+    numberOfSeconds--
         Thread.sleep(1000)
     println("Прошло $numberOfSeconds секунд")
 }
