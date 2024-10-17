@@ -18,5 +18,4 @@ fun main() {
         println(thePassword)
     }
 }
-
 const val MINIMUM_LENGTH = 5
