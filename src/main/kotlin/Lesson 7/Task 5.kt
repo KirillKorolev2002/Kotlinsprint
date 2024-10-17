@@ -5,7 +5,6 @@ fun main() {
     val charRangeForPasswordBig: CharRange = 'A'..'Z'
     val thePassword = StringBuilder()
     val isLengthOfPassword = readln().toInt()
-
     if (isLengthOfPassword > MINIMUM_LENGTH) {
         for (i in 0 until isLengthOfPassword) {
             when ((0..2).random()) {
