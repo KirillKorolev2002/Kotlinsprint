@@ -6,16 +6,17 @@ fun main() {
     val charRangeForPasswordBig: CharRange = 'A'..'Z'
     val thePassword = StringBuilder()
     val isLengthOfPassword = readln().toInt()
-    //– минимальная длина пароля 6 символов.Не совсем понятно как это условие описать правильно
-    if (isLengthOfPassword >= 6) {
-        for (i in 1 until isLengthOfPassword) {
-                val randomWords = charRangeForPassword.random()
-                thePassword.append(randomWords)
-                val randomNumbers = intRangeForPassword.random()
-                thePassword.append(randomNumbers)
-                val randomNumbersBig = charRangeForPasswordBig.random()
-                thePassword.append(randomNumbersBig)
+
+    if (isLengthOfPassword > MINIMUM_LENGTH) {
+        for (i in 0 until isLengthOfPassword) {
+            when ((0..2).random()) {
+                0 -> thePassword.append(charRangeForPassword.random())
+                1 -> thePassword.append(intRangeForPassword.random())
+                2 -> thePassword.append(charRangeForPasswordBig.random())
             }
         }
-    println(thePassword)
+        println(thePassword)
     }
+}
+
+const val MINIMUM_LENGTH = 5
