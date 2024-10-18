@@ -7,10 +7,9 @@ fun main() {
             if (contains == theProduct) {
                     println("Ингредиент $theProduct в рецепте есть")
                     break
-            }else
-            {
-                println("Такого ингредиента в рецепте нет")
             }
+            }
+    println("Такого ингредиента в рецепте нет")
         }
-    }
+
 
