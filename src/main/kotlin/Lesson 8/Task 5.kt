@@ -1,11 +1,14 @@
 package `Lesson 8`
 
 fun main() {
-    val numberOfElements = readln().toInt()
-    for (i in 0 until numberOfElements) {
-        val theNameOfElement = readln()
-        val theNewElement = theNameOfElement.split(" ")
-        //  val theNewMassiv=theNewElement.slice(0 until numberOfElements)
-        println(theNewElement)
+    println("Введите количество ингредиентов:")
+    val count = readln().toInt()
+
+    val ingredients = arrayOf("")
+
+    for (i in 0 until count) {
+        ingredients[i] = readln()
     }
+
+    println("Введенные ингредиенты: ${ingredients.joinToString(", ")}")
 }
