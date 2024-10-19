@@ -11,7 +11,7 @@ fun main() {
         println("Какой ингредиент вы хотите добавить?")
         val theNewElementOfTheList = readln()
         theList.add(theNewElementOfTheList)
-        println("$theList")
+        println("Теперь в рецепте есть следующие ингредиенты: $theList")
     } else {
         println("Завершаю работу")
     }
