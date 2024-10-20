@@ -5,12 +5,11 @@ fun main() {
     val theList = mutableListOf("Тесто", "Ананас", "Колбаса")
     println("В рецепте есть базовые ингредиенты: $theList")
     println("Желаете добавить еще? Да или нет?")
-    val theAnswer = readln()
 
-    if (theAnswer == "Да") {
+
+    if (readln().equals("Да", ignoreCase = true)) {
         println("Какой ингредиент вы хотите добавить?")
-        val theNewElementOfTheList = readln()
-        theList.add(theNewElementOfTheList)
+        theList.add(readln())
         println("Теперь в рецепте есть следующие ингредиенты: $theList")
     } else {
         println("Завершаю работу")
