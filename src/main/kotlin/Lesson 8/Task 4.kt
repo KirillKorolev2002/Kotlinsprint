@@ -8,7 +8,7 @@ fun main() {
     if (theInformationAboutIngredient in containsOfPizza) {
         println("В рецепте есть $theInformationAboutIngredient")
 
-        val theNumberOfChangeElement = readln().toInt()
+        val theNumberOfChangeElement = containsOfPizza.indexOf()
         val theChangeTheElement = readln()
         containsOfPizza.set(theNumberOfChangeElement, theChangeTheElement)
         println("Готово! Вы сохранили следующий список: ${containsOfPizza.contentToString()}")
