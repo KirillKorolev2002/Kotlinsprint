@@ -2,7 +2,7 @@ package `Lesson 10`
 
 fun main() {
 
-    if (user() > computer()) {
+    if (usersRoll() > computersRoll()) {
         println("Победило человечество")
     } else {
         println("Победила машина")
@@ -10,7 +10,7 @@ fun main() {
 }
 
 fun aRollOfTheDice(): Int = (1..6).random()
-fun user(): Int {
+fun usersRoll(): Int {
     println("Бросает игрок")
     val usersTurn = aRollOfTheDice()
     val theResultOfUsersTurn = usersTurn
@@ -18,7 +18,7 @@ fun user(): Int {
     return theResultOfUsersTurn
 }
 
-fun computer(): Int {
+fun computersRoll(): Int {
     println("Бросает компьютер")
     val computerTurn = aRollOfTheDice()
     val theResultOfComputersTurn = computerTurn
