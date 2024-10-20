@@ -1,8 +1,54 @@
 package `Lesson 10`
 
-/* Усовершенствуй игру, где пользователь и компьютер по очереди бросают кости. Побеждает выбросивший наибольшее число. Теперь дай возможность пользователю играть до тех пор пока ему не надоест. В конце программа должна вывести сколько партий он выиграл.
+fun main() {
+    theChampion()
+    theRepeatGame()
+}
 
-- после первого раунда программа задает вопрос: “Хотите бросить кости еще раз? Введите Да или Нет”;
-- программа в зависимости от ответа запускает новый раунд или заканчивает игру с выводом количества выигрышных партий человека;
-- в программе должно быть минимум 2 метода (для проведения раунда и для генерации значений брошенных кубиков);
-- основная логика программы должна находиться в main(), а 2 другие функции будут вспомогательными.*/
+fun aRollOfTheDice(): Int = (1..6).random()
+fun usersRoll(): Int {
+    println("Бросает игрок")
+    val usersTurn = aRollOfTheDice()
+    val theResultOfUsersTurn = usersTurn
+    println("Выпало у игрока:$theResultOfUsersTurn")
+    return theResultOfUsersTurn
+}
+
+fun computersRoll(): Int {
+    println("Бросает компьютер")
+    val computerTurn = aRollOfTheDice()
+    val theResultOfComputersTurn = computerTurn
+    println("Выпало у компьютера:$theResultOfComputersTurn")
+    return theResultOfComputersTurn
+}
+fun theChampion() {
+    if (usersRoll() > computersRoll()) {
+        println("Победило человечество")
+    } else if (usersRoll() < computersRoll()){
+        println("Победила машина")
+    } else if (usersRoll() == computersRoll()){
+        println("Chat gpt еще не доросла до победы")
+    }
+}
+fun theRepeatGame() {
+    for (j in generateSequence(0) { it }) {
+        println("Хотите бросить кости еще раз? Введите Да или Нет")
+        val usersAnswer = readln()
+        if (usersAnswer == "Да") {
+            theChampion()
+        } else {
+            println("Кол-во побед игрока:${whoIsTheChampion()}")
+        }
+    }
+}
+fun whoIsTheChampion(): Int {
+    val win = "Победило человечество"
+    var counter = 0
+    if (win == theChampion().toString()) {
+        for (a in generateSequence(0) { it }) {
+            counter++
+        }
+    }
+    return counter
+}
+
