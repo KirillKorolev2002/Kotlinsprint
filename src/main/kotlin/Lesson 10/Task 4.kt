@@ -38,17 +38,20 @@ fun theRepeatGame() {
             theChampion()
         } else {
             println("Кол-во побед игрока:${whoIsTheChampion()}")
+            break
         }
     }
 }
-fun whoIsTheChampion(): Int {
+fun whoIsTheChampion() {
     val win = "Победило человечество"
     var counter = 0
-    if (win == theChampion().toString()) {
+   return if (win == theChampion().toString()) {
         for (a in generateSequence(0) { it }) {
             counter++
+            println("$counter")
         }
-    }
-    return counter
+    } else {
+        println("Неудачник")
+   }
 }
 
