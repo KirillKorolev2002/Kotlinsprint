@@ -1,12 +1,12 @@
 package `Lesson 10`
 
 fun main() {
-    password()
+    val length = readln().toInt()
+    password(length)
 }
-fun password() {
+fun password(length:Int) {
     var thePassword = StringBuilder()
-    val theSizeOfPassword = readln().toInt()
-    for (counter in 1..theSizeOfPassword)
+    for (counter in 1..length)
         if (counter % 2 != 0) {
             val theNumberOfNumerals = (1..9).random()
             thePassword = thePassword.append(theNumberOfNumerals)
