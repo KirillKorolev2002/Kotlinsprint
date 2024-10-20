@@ -6,7 +6,7 @@ fun main() {
     for (contains in containsOfPizza) {
         if (contains == theProduct) {
             println("Ингредиент $theProduct в рецепте есть")
-            break
+            return
         }
     }
     println("Такого ингредиента в рецепте нет")
