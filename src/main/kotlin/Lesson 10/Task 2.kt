@@ -1,28 +1,17 @@
 package `Lesson 10`
 
 fun main() {
-    if (getLogin().toString() == "Логин недостаточно длинный" || getPassword().toString() == "Логин недостаточно длинный") {
-        println("Не войдешь!")
+    val login = readln()
+    val password = readln()
+    if (ValidationOfLength(login) && ValidationOfLength(password)) {
+        println("Войдешь!")
     } else {
-        println("Входи")
+        println("Не войдешь!")
     }
 }
 
-fun getLogin() {
-    val introduceLogin = readln()
-    if (introduceLogin.length <= MAХIMUM_LENGTH) {
-        println("Логин недостаточно длинный")
-    } else {
-        println(introduceLogin)
-    }
-}
-fun getPassword() {
-    val introducePassword = readln()
-    if (introducePassword.length <= MAХIMUM_LENGTH) {
-        println("Пароль недостаточно длинный")
-    } else {
-        println(introducePassword)
-    }
+fun ValidationOfLength(allowed: String): Boolean {
+    return allowed.length >= MAХIMUM_LENGTH
 }
 
 const val MAХIMUM_LENGTH = 4
