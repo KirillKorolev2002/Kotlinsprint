@@ -1,12 +1,9 @@
 package `Lesson 9`
 
 fun main() {
-    val theMap = mapOf(1 to 2, 2 to 50,3 to 15)
-    val theNumberOfPortions = readln().toInt()
+    val theList = listOf(2, 50, 15)
+    val number = readln().toInt()
+    val theNumberOfList = theList.map { it * number }
 
-    val theNumberOfEggs = theMap.get(1)?.times(theNumberOfPortions)
-    val theNumberOfMilk = theMap.get(2)?.times(theNumberOfPortions)
-    val theNumberOfOil = theMap.get(3)?.times(theNumberOfPortions)
-
-    println("На $theNumberOfPortions вам понадобится: Яиц – $theNumberOfEggs, молока – $theNumberOfMilk, сливочного масла – $theNumberOfOil")
+    println("На $number вам понадобится: Яиц – ${theNumberOfList[0]}, молока – ${theNumberOfList[1]}, сливочного масла – ${theNumberOfList[2]}")
 }
