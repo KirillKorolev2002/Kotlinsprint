@@ -1,7 +1,5 @@
 package `Lesson 9`
 
-import java.util.*
-
 fun main() {
     val ingredients = mutableSetOf<String>()
 
@@ -12,7 +10,8 @@ fun main() {
     }
     val sortedIngredients = ingredients.sorted()
 
-    val stringSortedIngredients = sortedIngredients.joinToString(", ") { it.capitalize()}
+    val stringSortedIngredients = (sortedIngredients.joinToString(", ")).replaceFirstChar { it.uppercase() }
 
-        println(stringSortedIngredients)
+
+    println(stringSortedIngredients)
 }
