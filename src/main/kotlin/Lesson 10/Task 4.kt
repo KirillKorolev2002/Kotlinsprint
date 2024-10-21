@@ -1,8 +1,8 @@
 package `Lesson 10`
 
 fun main() {
-    theChampion()
-    theRepeatGame()
+    champion()
+    toRepeatGame()
 }
 
 fun aRollOfTheDice(): Int = (1..6).random()
@@ -21,37 +21,34 @@ fun computersRoll(): Int {
     println("Выпало у компьютера:$theResultOfComputersTurn")
     return theResultOfComputersTurn
 }
-fun theChampion() {
-    if (usersRoll() > computersRoll()) {
+var playerWins = 0
+var computerWins = 0
+fun champion() {
+    val userScore = usersRoll()
+    val computerScore = computersRoll()
+    if (userScore > computerScore) {
         println("Победило человечество")
-    } else if (usersRoll() < computersRoll()){
+        playerWins++
+    } else if (userScore < computerScore) {
         println("Победила машина")
-    } else if (usersRoll() == computersRoll()){
+        computerWins++
+    } else {
         println("Chat gpt еще не доросла до победы")
     }
 }
-fun theRepeatGame() {
-    for (j in generateSequence(0) { it }) {
+
+fun toRepeatGame() {
+    while (true) {
         println("Хотите бросить кости еще раз? Введите Да или Нет")
         val usersAnswer = readln()
-        if (usersAnswer == "Да") {
-            theChampion()
+        if (usersAnswer.equals("Да", ignoreCase = true)) {
+            champion()
         } else {
-            println("Кол-во побед игрока:${whoIsTheChampion()}")
+            println("Количество побед игрока: $playerWins")
+            println("Количество побед компьютера: $computerWins")
             break
         }
     }
 }
-fun whoIsTheChampion() {
-    val win = "Победило человечество"
-    var counter = 0
-   return if (win == theChampion().toString()) {
-        for (a in generateSequence(0) { it }) {
-            counter++
-            println("$counter")
-        }
-    } else {
-        println("Неудачник")
-   }
-}
+
 
