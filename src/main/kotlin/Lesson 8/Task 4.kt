@@ -8,10 +8,9 @@ fun main() {
     val index = containsOfPizza.indexOf(theInformationAboutIngredient)
 
     if (index != -1) {
-        val theNumberOfChangeElement = readln().toInt()
-        if (theNumberOfChangeElement in containsOfPizza.indices) {
+        if ( index  in containsOfPizza.indices) {
             val theChangeTheElement = readln()
-            containsOfPizza[theNumberOfChangeElement] = theChangeTheElement
+            containsOfPizza[index] = theChangeTheElement
             println("Готово! Вы сохранили следующий список: ${containsOfPizza.contentToString()}")
         } else {
             println("Неверный номер ингредиента.")
