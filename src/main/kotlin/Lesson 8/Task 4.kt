@@ -5,14 +5,16 @@ fun main() {
     println("$containsOfPizza")
     val theInformationAboutIngredient = readln()
 
-    if (theInformationAboutIngredient in containsOfPizza) {
-        println("В рецепте есть $theInformationAboutIngredient")
+    val index = containsOfPizza.indexOf(theInformationAboutIngredient)
 
-        val theNumberOfChangeElement = containsOfPizza.indexOf()
-        val theChangeTheElement = readln()
-        containsOfPizza.set(theNumberOfChangeElement, theChangeTheElement)
-        println("Готово! Вы сохранили следующий список: ${containsOfPizza.contentToString()}")
-    } else {
-        println("В рецепте нет")
+    if (index != -1) {
+        val theNumberOfChangeElement = readln().toInt()
+        if (theNumberOfChangeElement in containsOfPizza.indices) {
+            val theChangeTheElement = readln()
+            containsOfPizza[theNumberOfChangeElement] = theChangeTheElement
+            println("Готово! Вы сохранили следующий список: ${containsOfPizza.contentToString()}")
+        } else {
+            println("Неверный номер ингредиента.")
+        }
     }
 }
