@@ -16,21 +16,24 @@ fun main() {
     println(metadataold.userToString())
 }
 
-class User {
-    var id: String = " "
-    var login: Int = 40
-    var password: String = " "
-    var mail: String = " "
+class User(
+    var id: String = " ",
+    var login: Int = 40,
+    var password: String = " ",
+    var mail: String = " ",
+) {
     fun userToString(): String {
         return "id: $id  login: $login password: $password  mail: $mail"
     }
 }
 
-class oldUser {
-    var id: String = " "
-    var login: Int = 40
-    var password: String = " "
-    var mail: String = " "
+class oldUser(
+    var id: String = " ",
+    var login: Int = 40,
+    var password: String = " ",
+    var mail: String = " ",
+) {
+
     fun userToString(): String {
         return "id: $id  login: $login password: $password  mail: $mail"
     }
