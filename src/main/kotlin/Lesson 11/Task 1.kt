@@ -8,7 +8,7 @@ fun main() {
     metadata.password = "Losost"
     metadata.mail = "kirillkorolev2002@mail.ru "
     println(metadata.userToString())
-    val metadataold = oldUser()
+    val metadataold = OldUser()
     metadataold.id = "@gleb.nikitin9696"
     metadataold.login = 4040
     metadataold.password = "Losost"
@@ -27,7 +27,7 @@ class User(
     }
 }
 
-class oldUser(
+class OldUser(
     var id: String = " ",
     var login: Int = 40,
     var password: String = " ",
