@@ -2,17 +2,17 @@ package `Lesson 10`
 
 fun main() {
     val length = readln().toInt()
-    password(length)
+    println(createPassword(length))
 }
-fun password(length:Int) {
+fun createPassword(length:Int): String {
     var thePassword = StringBuilder()
     for (counter in 1..length)
-        if (counter % 2 != 0) {
+       if (counter % 2 != 0) {
             val theNumberOfNumerals = (1..9).random()
             thePassword = thePassword.append(theNumberOfNumerals)
         } else {
             val theNumberOfSymbols = ('!'..'/').random()
             thePassword = thePassword.append(theNumberOfSymbols)
         }
-    println(thePassword)
+    return thePassword.toString()
 }
